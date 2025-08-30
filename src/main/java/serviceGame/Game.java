@@ -36,7 +36,7 @@ public class Game {
         player.setAttack(attackPlayer);
         monstr.setDefense(random.nextInt(0, 10));
         player.attack(monstr);
-        printResultStartPlayer(player, monstr);
+        player.printResultStartPlayer(monstr);
     }
     public static int checkAttack(){
         boolean flag;
@@ -67,24 +67,7 @@ public class Game {
         monstr.setAttack(attackMonstr);
         player.setDefense(random.nextInt(0, 10));
         monstr.attack(player);
-        printResultStartMonstr(player, monstr);
-    }
-
-    public static void printResultStartPlayer(Player player, Monstr monstr) {
-
-        System.out.println("Атака игрока:" + player.getAttack());
-        System.out.println("защита монстра: " + monstr.getDefense());
-        System.out.println("здоровье игрока " + player.getHealth());
-        System.out.println("здоровье монстра: " + monstr.getHealth());
-        System.out.println();
-    }
-
-    public static void printResultStartMonstr(Player player, Monstr monstr) {
-        System.out.println("Атака монстра: " + monstr.getAttack());
-        System.out.println("Защита игрока: " + player.getDefense());
-        System.out.println("здоровье монстра: " + monstr.getHealth());
-        System.out.println("здоровье игрока " + player.getHealth());
-        System.out.println();
+        monstr.printResultStartMonstr(player);
     }
 
     public static void printWinner(Player player, Monstr monstr) {
