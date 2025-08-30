@@ -7,3 +7,4 @@ public class Monstr extends Character {
         setHealth(maxHealth);
     }
 }
+//123

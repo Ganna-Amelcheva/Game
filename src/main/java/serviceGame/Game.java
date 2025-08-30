@@ -60,7 +60,7 @@ public class Game {
         }while (flag==false);
         return attackPlayer;
     }
-
+//123
     public static void gameStartMonstr(Player player, Monstr monstr) {
         System.out.println("игру начинает монстр");
         int attackMonstr = random.nextInt(0, 20);
